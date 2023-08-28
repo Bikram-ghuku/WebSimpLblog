@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link href="./css/login.css" rel="stylesheet">
+        <script>
+            const checkLogin = () =>{
+                var xd;
+                document.getElementById
+                var email = document.getElementById("emailInp").value;
+                var pswd = document.getElementById("pswdInp").value;
+                fetch().then(response => response.json()).then(data => xd = data)
+                console.log(xd)
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="lB">
+            <div class="lbCont">
+                <div class="titl">
+                    <h1>Login to your account</h1>
+                </div>
+                <div class="sep"></div>
+                <div class="lArea">
+                    <form action="./welcome.htm" type="post" onsubmit="return checkLogin()">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="emailInp" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="pswdInp" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <p id="alertMsg"></p>
+                        <small>Don't have an account <a href="#">register now</a></small>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
