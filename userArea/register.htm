@@ -10,7 +10,21 @@
             document.getElementById
             var email = document.getElementById("emailInp").value;
             var pswd = document.getElementById("pswdInp").value;
-            console.log(email, pswd)
+            var user = document.getElementById("userInp").value;
+            const resp = fetch("https://ecommerceserver-2lhs.onrender.com/register",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "email": email,
+                    "pswd": pswd,
+                    "name":user,
+                    "type": "user"
+                })
+            }).then((resp)=>{
+                console.log(resp);
+            })
             return false;
         }
         </script>
@@ -19,26 +33,26 @@
         <div class="lB">
             <div class="lbCont">
                 <div class="titl">
-                    <h1>Login to your account</h1>
+                    <h1>Create your account</h1>
                 </div>
                 <div class="sep"></div>
                 <div class="lArea">
                     <form action="./welcome.htm" type="post" onsubmit="return checkLogin()">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
+                            <label for="userInp">Username</label>
+                            <input type="text" class="form-control" id="userInp" aria-describedby="userHelp" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                          <label for="emailInp">Email address</label>
                           <input type="email" class="form-control" id="emailInp" aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Password</label>
+                          <label for="pswdInp">Password</label>
                           <input type="password" class="form-control" id="pswdInp" placeholder="Password">
-                        </div>
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">remember me</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <p id="alertMsg"></p>
-                        <small>Don't have an account <a href="#">register now</a></small>
+                        <small>Already have an account <a href="./login.htm">Login</a></small>
                       </form>
                 </div>
             </div>

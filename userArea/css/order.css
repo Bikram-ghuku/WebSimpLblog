@@ -1,0 +1,66 @@
+.bCov{
+    width: 100vw;
+    height: 100vh;
+    background-color: #d4d4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.body{
+    box-shadow: 10px 10px 10px 15px #888888;
+    background-color: #ffffff;
+    width: 90vw;
+    height: 90vh;
+}
+
+.leftNav{
+    padding-top: 2%;
+    background-color: #404040;
+    width: 20%;
+    height: 100%;
+}
+
+.navBtn{
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+}
+
+.navElem{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: x-large;
+    display: block;
+    outline: solid 1px #ffffff;
+}
+
+.imgWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:40%;
+
+}
+
+.logo{
+    width: 30%;
+}
+
+.sep{
+    height: 10%;;
+}
+
+.cName{
+    font-size: large;
+    color: #ffffff;
+}

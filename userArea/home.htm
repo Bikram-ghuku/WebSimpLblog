@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Welcome To client area</title>
+    <link href="./css/home.css" rel="stylesheet">
+    <script>
+        function load(type){
+            document.location = document.location.origin + "/userArea/" + type + ".htm";
+        }
+        document.getElementsByClassName("uName")[0].innerHTML = "OP"
+    </script>
+</head>
+<body>
+    <div class="bCov">
+        <div class="body">
+            <div class="leftNav">
+                <div class="imgWrap">
+                    <img src="./img/logo.png" alt="logo" class="logo">
+                    <div class="sep"></div>
+                    <label for="cName" class="cName">WebSimpl - Building Digital Product</label>
+                </div>
+               
+                <div class="navElem" style="background-color: #1c1c1c;">
+                    <button onclick="load('home')" class="navBtn"><i class="fa-solid fa-house"></i> Home</button>
+                </div>
+                <div class="navElem">
+                    <button onclick="load('cart')" class="navBtn"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                </div>
+                <div class="navElem">
+                    <button onclick="load('order')" class="navBtn">Orders</button>
+                </div>
+                <div class="navElem">
+                    <button onclick="load('LogOut')" class="navBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+                </div>
+            </div>
+            <div class="rElems">
+                <div class="lUser">
+                    <div class="uInfo">
+                        <img width="180" height="180" src="https://img.icons8.com/bubbles/200/user.png" alt="user"/>
+                        <div class="uName" style="text-align: center; font-size: x-large;">Test User</div>
+                        <div class="uEmail" style="text-align: center; font-size: large;"> test@user.com</div>
+
+                    </div>
+                </div>
+                <div class="rUser">
+                    <div class="rInfo">
+                        <h2 style="text-align: center; padding-bottom: 10%;">Update User Info</h2>
+                        <form onsubmit="return false">
+                            <div class="form-group">
+                                <label for="userInp">Username</label>
+                                <input type="text" class="form-control" id="userInp" aria-describedby="userHelp" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                              <label for="emailInp">Email address</label>
+                              <input type="email" class="form-control" id="emailInp" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <p id="alertMsg"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

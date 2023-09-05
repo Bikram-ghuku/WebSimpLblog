@@ -1,0 +1,112 @@
+.bCov{
+    width: 100vw;
+    height: 100vh;
+    background-color: #d4d4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.body{
+    box-shadow: 10px 10px 10px 15px #888888;
+    background-color: #ffffff;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+}
+
+.leftNav{
+    padding-top: 2%;
+    background-color: #404040;
+    width: 20%;
+    height: 100%;
+}
+
+.navBtn{
+    border: none;
+    background: none;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+}
+
+.navElem{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: x-large;
+    display: block;
+    outline: solid 1px #ffffff;
+}
+
+.imgWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:40%;
+
+}
+
+.logo{
+    width: 30%;
+}
+
+.sep{
+    height: 10%;;
+}
+
+.cName{
+    font-size: large;
+    color: #ffffff;
+}
+
+.rElems{
+    padding-left: 2%;
+    padding-top: 5%;
+    float: right;
+    width: 80%;
+    display: flex;
+    background-color: #e8e9eb;
+}
+
+.lUser{
+    float: left;
+    width: 30%;
+    height: 90%;
+    background-color: #ffffff;
+    display: flex;
+    padding-top: 10%;
+    justify-content: center;
+}
+
+.rUser{
+    width: 70%;
+    height: 100%;
+    padding-right: 5%;
+}
+
+.rInfo{
+    float: right;
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 2%;
+    justify-content: center;
+
+}
+
+.form-group{
+    padding-bottom: 5%;
+}
+
+.sep{
+    outline: 1px solid #888888;
+}
