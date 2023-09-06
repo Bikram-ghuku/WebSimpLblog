@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Welcome To cart area</title>
+    <link href="./css/services.css" rel="stylesheet">
+    <script>
+        function load(type){
+            if(type != 'LogOut'){
+                document.location = document.location.origin + "/userArea/" + type + ".htm";
+            }else{
+                document.location = document.location.origin + "/login.htm";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="bCov">
+        <div class="body">
+            <div class="leftNav">
+                <div class="imgWrap">
+                    <img src="./img/logo.png" alt="logo" class="logo">
+                    <div class="sep"></div>
+                    <label for="cName" class="cName">WebSimpl - Building Digital Product</label>
+                </div>
+               
+                <div class="navElem">
+                    <button onclick="load('home')" class="navBtn"><i class="fa-solid fa-house"></i> Home</button>
+                </div>
+                <div class="navElem" style="background-color: #1c1c1c;">
+                    <button onclick="load('services')" class="navBtn"><i class="fa-solid fa-basket-shopping"></i> Products</button>
+                </div>
+                <div class="navElem" >
+                    <button onclick="load('cart')" class="navBtn"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                </div>
+                <div class="navElem">
+                    <button onclick="load('order')" class="navBtn"><i class="fa-solid fa-user-group"></i> Orders</button>
+                </div>
+                <div class="navElem">
+                    <button onclick="load('LogOut')" class="navBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+                </div>
+            </div>
+            <div class="rElems">
+                <h2 style="text-align: center;">Available Tech Services & Digital Products</h2>
+                <div class="rflex card-columns">
+                    <div class="orderR">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header">
+                              Featured
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header">
+                              Featured
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header">
+                              Featured
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header">
+                              Featured
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-header">
+                              Featured
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Special title treatment</h5>
+                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

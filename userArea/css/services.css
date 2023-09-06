@@ -87,4 +87,8 @@
     width: 94%;
     height: 80vh;
     outline: solid 1px #000000;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2%;
 }
