@@ -10,6 +10,7 @@
 
 
 .body{
+    display: flex;
     box-shadow: 10px 10px 10px 15px #888888;
     background-color: #ffffff;
     width: 90vw;
@@ -63,4 +64,41 @@
 .cName{
     font-size: large;
     color: #ffffff;
+}
+
+.rElems{
+    padding-left: 2%;
+    padding-top: 1%;
+    float: right;
+    width: 80%;
+    background-color: #e8e9eb;
+}
+
+.rflex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90%;
+}
+
+.cartR{
+    background-color: #ffffff;
+    padding: 2%;
+    width: 35%;
+    height: 90%;
+    outline: solid 1px #000000;
+}
+
+.cartL{
+    padding: 2%;
+    width: 63%;
+    height: 90%;
+    background-color: #ffffff;
+    outline: solid 1px #000000;
+    overflow: auto;
+}
+
+#promo{
+    border: none;
+    border-bottom: 1px solid #000000;
 }

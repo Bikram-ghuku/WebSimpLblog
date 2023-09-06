@@ -10,6 +10,7 @@
 
 
 .body{
+    display: flex;
     box-shadow: 10px 10px 10px 15px #888888;
     background-color: #ffffff;
     width: 90vw;
@@ -63,4 +64,13 @@
 .cName{
     font-size: large;
     color: #ffffff;
+}
+
+.rElems{
+    padding-left: 2%;
+    padding-top: 5%;
+    float: right;
+    width: 80%;
+    display: flex;
+    background-color: #e8e9eb;
 }
