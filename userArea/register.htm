@@ -11,7 +11,7 @@
             var email = document.getElementById("emailInp").value;
             var pswd = document.getElementById("pswdInp").value;
             var user = document.getElementById("userInp").value;
-            const resp = fetch("https://ecommerceserver-2lhs.onrender.com/register",{
+            const resp = fetch("http://localhost:8080/register",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

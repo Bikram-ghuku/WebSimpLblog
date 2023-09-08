@@ -11,7 +11,7 @@
                 document.getElementById
                 var email = document.getElementById("emailInp").value;
                 var pswd = document.getElementById("pswdInp").value;
-                fetch('https://ecommerceserver-2lhs.onrender.com/login', {
+                fetch('http://localhost:8080/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -25,7 +25,9 @@
                 }).then((data)=>{
                     console.log(data);
                     if(data.code == "ok"){
+                        localStorage.setItem('session', data.sessres)
                         window.location.href = "./home.htm";
+                        
                     }else{
                         document.getElementById("alertMsg").innerHTML = data.code;
                     }

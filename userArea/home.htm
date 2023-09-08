@@ -12,7 +12,6 @@
         function load(type){
             document.location = document.location.origin + "/userArea/" + type + ".htm";
         }
-        document.getElementsByClassName("uName")[0].innerHTML = "OP"
     </script>
 </head>
 <body>
@@ -38,15 +37,15 @@
                     <button onclick="load('order')" class="navBtn"><i class="fa-solid fa-user-group"></i> Orders</button>
                 </div>
                 <div class="navElem">
-                    <button onclick="load('LogOut')" class="navBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+                    <button onclick="load('Login')" class="navBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
                 </div>
             </div>
             <div class="rElems">
                 <div class="lUser">
                     <div class="uInfo">
                         <img width="180" height="180" src="https://img.icons8.com/bubbles/200/user.png" alt="user"/>
-                        <div class="uName" style="text-align: center; font-size: x-large;">Test User</div>
-                        <div class="uEmail" style="text-align: center; font-size: large;"> test@user.com</div>
+                        <div class="uName" id="uName" style="text-align: center; font-size: x-large;">Test User</div>
+                        <div class="uEmail" id="uEmail" style="text-align: center; font-size: large;"> test@user.com</div>
 
                     </div>
                 </div>
@@ -65,6 +64,55 @@
                             <button type="submit" class="btn btn-primary">Update</button>
                             <p id="alertMsg"></p>
                         </form>
+                        <script>
+                            var sessId = localStorage.getItem('session');
+                            fetch('http://127.0.0.1:8080/getUser?sess='+sessId,{
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                }
+                            }).then((resp)=>{
+                                return resp.json();
+                            }).then((data)=>{
+                                console.log(data);
+                                if(!data.code){
+        
+                                    document.getElementById("uName").innerHTML = data.name;
+                                    document.getElementById("uEmail").innerHTML = data.email;
+                                    document.getElementById("userInp").value = data.name;
+                                    document.getElementById("emailInp").value = data.email;
+                                }else{
+                                    document.location = document.location.origin + "/userArea/login.htm";
+                                }
+                            })
+
+                            document.querySelector('form').addEventListener('submit', ()=>{
+                                var name = document.getElementById("userInp").value;
+                                var email = document.getElementById("emailInp").value;
+                                fetch('http://localhost:8080/updateUser',{
+                                    method: 'POST',
+                                    body: JSON.stringify({
+                                        sess: sessId,
+                                        name: name,
+                                        email: email
+                                    }),
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    }
+                                }).then((resp)=>{
+                                    return resp.json();
+                                }).then((data)=>{
+                                    console.log(data);
+                                    if(data.code == "ok"){
+                                        document.getElementById("alertMsg").innerHTML = "User info updated successfully";
+                                        document.getElementById("uName").innerHTML = name;
+                                        document.getElementById("uEmail").innerHTML = email;
+                                    }else{
+                                        document.getElementById("alertMsg").innerHTML = data.code
+                                    }
+                                })
+                                })
+                        </script>
                     </div>
                 </div>
             </div>
